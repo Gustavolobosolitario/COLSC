@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sua Escola - Educação de Qualidade</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
     <style>
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Helvetica Neue Medium', sans-serif;
             box-sizing: border-box;
             
         }
@@ -102,20 +99,103 @@
     .mission-section {
         text-align: center;
         margin: 20px 0;
+        position: relative;
     }
+
     
     .section-header {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 10px;
+        flex-direction: column;
+        margin-bottom: 50px;
+        text-align: center;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+
+
+    .title-line {
+        height: 3px;
+        background-color: #293377;
+        margin: 0 10px;
+        display: block;
     }
     
-    .title-line {
-        flex-grow: 1;
-        height: 3px; /* Tamanho do risco */
-        background-color: #293377; /* Cor azul */
+    .title-line::before, .title-line::after {
+        content: "";
+        height: 3px;
+        background-color: #293377;
         margin: 0 10px;
+        display: block;
+    }
+    
+    .title-line p {
+        display: inline-block;
+        font-weight: bold;
+        font-size: 18px;
+        margin: 0 20px;
+        color: #293377;
+    }
+    
+    .title-line::before {
+        content: "";
+        height: 3px;
+        background-color: #293377;
+        margin-bottom: 10px;
+        display: block;
+    }
+    
+    .title-line::after {
+        content: "";
+        height: 3px;
+        background-color: #293377;
+        margin-top: 10px;
+        display: block;
+    }
+
+
+    .saiba-mais-buttona {
+        display: block;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: #fff; /* Cor do texto */
+        background-color: transparent; /* Cor de fundo transparente para o contorno */
+        border: 2px solid #ffcc00; /* Cor do contorno amarelo */
+        border-radius: 5px; /* Borda arredondada */
+        margin-bottom: -400px;
+       
+
+        margin: 20px auto; /* Adiciona margem superior e inferior de 20px e centraliza horizontalmente */
+    }
+    
+    .centered-section {
+        text-align: center;
+        margin-bottom: -120px;
+    }
+
+
+    .right-image img {
+        width: 150%; /* Ajuste a largura conforme necessário */
+        margin-right: 20px; /* Ajuste o espaçamento à direita conforme necessário */
+    }
+    
+    
+    
+    
+
+    .centered-image {
+        width: 100%;
+        height: auto;
+        margin-top: 20px; /* Adiciona espaço entre o botão e a imagem */
+    }
+    
+    
+    .subtitle {
+        margin-top: 10px; /* Adiciona espaçamento entre o título e o subtítulo */
+        text-align: center;
     }
     
     p {
@@ -134,6 +214,10 @@
     
     .subtitle {
         margin-bottom: 20px;
+        position: absolute;
+        top: 0;
+        text-align: center;
+        
     }
     
     img {
@@ -166,7 +250,7 @@
     }
 
     .custom-image {
-        width: 900px; /* Define a largura desejada para a imagem */
+        width: 1200px; /* Define a largura desejada para a imagem */
         height: auto; /* Mantém a proporção original da imagem */
     }
 
@@ -174,6 +258,7 @@
         display: flex; /* Usa flexbox para alinhar as imagens lado a lado */
         justify-content: space-between; /* Distribui o espaço disponível entre as imagens */
         margin-bottom: 20px; /* Adiciona margem inferior para separar das imagens */
+        
     }
 
     .image {
@@ -189,6 +274,24 @@
         border: none; /* Remove a borda do botão */
         border-radius: 4px; /* Adiciona cantos arredondados ao botão */
         cursor: pointer; /* Adiciona o ícone de cursor de apontador ao botão */
+    }
+
+
+
+
+
+    .section-content {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .yellow-text {
+        text-align: left;
+    }
+    
+    .image-side img {
+        width: 180%; /* Ajuste a largura da imagem conforme necessário */
+        height: auto; /* Mantém a proporção da imagem */
     }
 
 
@@ -858,10 +961,10 @@
     .button1 {
         position: absolute;
         top: 79%;
-        left: 38%;
+        left: 33%;
         transform: translate(-50%, -50%);
         padding: 10px 20px;
-        font-size: 16px;
+        font-size: 18px;
         background-color: #021024;
         color: white;
         border: none;
@@ -870,23 +973,96 @@
     }
 
 
-   
+
+
+    .custom-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .image {
+        width: 200%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+        margin: 10px;
+    }
+    
+    .button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.2s ease;
+    }
+    
+    .button:hover {
+        background-color: #0056b3;
+    }
 
 
 
+    @media only screen and (max-width: 600px) {
+        header {
+            flex-direction: column; /* Altera a direção da flexbox para empilhar em telas pequenas */
+            text-align: center; /* Centraliza o texto no cabeçalho */
+        }
+    
+        .logo {
+            margin-right: 0; /* Remove a margem à direita no logo */
+            margin-bottom: 10px; /* Adiciona margem inferior para separar o logo do menu */
+        }
+    
+        .menu {
+            margin-right: 0; /* Remove a margem à direita no menu */
+        }
+    
+        .menu-item {
+            margin: 0; /* Remove a margem nos itens do menu */
+        }
+    
+        .submenu {
+            position: static; /* Altera a posição do submenu para estática */
+            display: none; /* Esconde o submenu por padrão */
+            text-align: left; /* Alinha o texto à esquerda no submenu */
+        }
+    
+        .menu-item:hover .submenu {
+            display: block; /* Exibe o submenu quando o item do menu é destacado */
+        }
+    
+        .video-section,
+        .mission-section,
+        .image-side,
+        .right-image img,
+        .centered-section,
+        .centered-image,
+        .custom-container,
+        .image,
+        .button1 {
+            width: 100%; /* Define a largura para 100% na tela pequena */
+        }
+    }
+        /* Add your CSS styles here */
+        /* ... */
+    </style>
+</head>
 
-    
-    
-
-    
-    
-    
-    
-    
-   </style>
-   
-    
-
+<body>
     <!-- Header -->
     <header>
         <div class="logo"></div>
@@ -897,10 +1073,10 @@
                     <a href="#">Quem Somos</a>
                     <!-- Submenu para Quem Somos -->
                     <ul class="submenu">
-                        
+
                         <li><a href="historia.html">Historia</a></li>
                         <li><a href="#">Pilares e Valores</a></li>
-                        <li><a href="estrutura.html">Nossa Estrutura</a></li>
+                        <li><a href="nossaestrut.html">Nossa Estrutura</a></li>
                     </ul>
                 </li>
                 <li class="menu-item">
@@ -910,47 +1086,47 @@
                         <li><a href="niveisdeensino.html">Níveis de Ensino</a></li>
                         <li><a href="#">Projeto Bilíngue</a></li>
                         <li><a href="materiais.html">Material SAS</a></li>
-                        
+
                     </ul>
                 </li>
-            
+
                 <li class="menu-item">
                     <a href="#">Contato</a>
                     <!-- Submenu para Contato -->
                     <ul class="submenu">
                         <li><a href="contato.html">Contato</a></li>
-                        
+
                     </ul>
                 </li>
             </ul>
         </nav>
     </header>
 
-<script>
-    // Adicione o seguinte script JavaScript
+    <script>
+        // Adicione o seguinte script JavaScript
 
-    document.addEventListener('DOMContentLoaded', function () {
-        // Selecione todos os itens do menu e submenu
-        const menuItems = document.querySelectorAll('.menu-item');
+        document.addEventListener('DOMContentLoaded', function () {
+            // Selecione todos os itens do menu e submenu
+            const menuItems = document.querySelectorAll('.menu-item');
 
-        // Adicione um ouvinte de evento para cada item do menu
-        menuItems.forEach(function (menuItem) {
-            const submenu = menuItem.querySelector('.submenu');
+            // Adicione um ouvinte de evento para cada item do menu
+            menuItems.forEach(function (menuItem) {
+                const submenu = menuItem.querySelector('.submenu');
 
-            menuItem.addEventListener('mouseenter', function () {
-                // Adicione uma classe de destaque quando o mouse entra
-                menuItem.classList.add('highlight');
-                submenu.classList.add('active');
-            });
+                menuItem.addEventListener('mouseenter', function () {
+                    // Adicione uma classe de destaque quando o mouse entra
+                    menuItem.classList.add('highlight');
+                    submenu.classList.add('active');
+                });
 
-            menuItem.addEventListener('mouseleave', function () {
-                // Remova a classe de destaque quando o mouse sai
-                menuItem.classList.remove('highlight');
-                submenu.classList.remove('active');
+                menuItem.addEventListener('mouseleave', function () {
+                    // Remova a classe de destaque quando o mouse sai
+                    menuItem.classList.remove('highlight');
+                    submenu.classList.remove('active');
+                });
             });
         });
-    });
-</script>
+    </script>
 
     <!-- Video Section -->
     <section class="video-section">
@@ -964,32 +1140,45 @@
             <p>SOBRE NÓS</p>
             <div class="title-line"></div>
         </div>
-        <div class="subtitle">
-            <h2>Quem somos</h2>
+        <div class="subtitle"></div>
+            <h1>Quem Somos</h1>
+            <div class="subtitle"></div>
+           
         </div>
         <img src="colegio.png" alt="Nossa Missão">
-        <p>Desde 1905 somos uma escola que mantém uma tradição de ensino de alta qualidade que nos diferencia das outras da cidade e região. 
-            Nossos alunos recebem não apenas uma educação sólida, mas também são incentivados a serem cidadãos ativos e positivos em nossa sociedade.
-            Contamos com um rico capital intelectual de professores excepcionalmente qualificados e experientes, que demonstram o compromisso contínuo com a sua própria atualização na área educacional e desenvolvimento pessoal.
-            
-            
-            <a href="#" class="saiba-mais-link">Saiba Mais</a>
-        </p>
+        <p>Desde 1905 somos uma escola que mantém uma tradição de ensino de alta qualidade que nos diferencia das outras
+            da cidade e região.
+            Nossos alunos recebem não apenas uma educação sólida, mas também são incentivados a serem cidadãos ativos e
+            positivos em nossa sociedade.
+            Contamos com um rico capital intelectual de professores excepcionalmente qualificados e experientes, que
+            demonstram o compromisso contínuo com a sua própria atualização na área educacional e desenvolvimento
+            pessoal.</p>
+        </div>
+    </div>
+
+
+
+            <!-- Botão "Saiba Mais" contornado em amarelo -->
+            <a href="#" class="saiba-mais-buttona">Saiba Mais</a>
+        </div>
+
     </section>
 
     <div class="centered-section">
         <img src="167778.png" alt="Imagem Centralizada" class="centered-image">
     </div>
 
-    
+
     <!-- Título, Subtítulo, Texto, Ícones, Imagem e Botão -->
     <section class="content-section">
         <div class="container">
             <div>
                 <h2 class="yellow-text">Níveis de Ensino</h2>
                 <h1 class="yellow-text">Educação Infantil</h1>
-                <p class="yellow-text">Nosso compromisso com o ensino de qualidade inicia-se na Educação Infantil, sendo a primeira etapa da Educação Básica. para promover o desenvolvimento integral de nossos alunos, desde pequenos, contamos com material didático completo.</p>
-    
+                <p class="yellow-text">Nosso compromisso com o ensino de qualidade inicia-se na Educação Infantil,
+                    sendo a primeira etapa da Educação Básica. para promover o desenvolvimento integral de nossos
+                    alunos, desde pequenos, contamos com material didático completo.</p>
+
                 <!-- Ícones com descrição -->
                 <div class="icon-container">
                     <div class="icon-item">
@@ -1001,22 +1190,22 @@
                         <p>Descrição do Ícone 2</p>
                     </div>
                 </div>
-    
+
                 <!-- Botão "Saiba Mais" contornado em amarelo -->
                 <a href="#" class="saiba-mais-buttona">Saiba Mais</a>
             </div>
-    
+
             <!-- Imagem ao lado do texto -->
             <div class="image-side right-image">
-                <img src="educacao infantil corrigido1.png" alt="Imagem ao lado do texto" >
+                <img src="educacao infantil corrigido1.png" alt="Imagem ao lado do texto">
             </div>
         </div>
     </section>
-    
+
     <section class="content-section">
         <div class="container">
             <!-- ... (rest of your content) ... -->
-    
+
             <!-- Setas para navegação no carrossel -->
             <div class="carousel-nav">
                 <span class="prev"></span>
@@ -1025,128 +1214,116 @@
         </div>
     </section>
 
-    
-
-    <div class="custom-container">
-        <div class="image-container">
-            <img src="145.png" alt="Imagem 1" class="image">
-            <img src="155.png" alt="Imagem 2" class="image">
-        </div>
-        <a href="https://www.youtube.com/watch?v=fbFXunR0kEE&t=5s"button class="button">Saber Mais</a>
+    <!-- Primeiro bloco -->
+<div class="custom-container">
+    <div class="image-container">
+        <img src="125s.png" alt="Imagem 1" class="image">
+        <img src="125s55.png" alt="Imagem 2" class="image">
     </div>
-
-    <div class="custom-container">
-        <div class="image-container">
-            <img src="165.png" alt="Imagem 1" class="image">
-            <img src="166.png" alt="Imagem 2" class="image">
-        </div>
-        <a href="https://saseducacao.com.br/"button class="button">Saber Mais</a>
-    </div>
-
-
-    
-    <div class="section-container">
-        <div class="custom-section">
-            <img src="1677.png" alt="Imagem Editável" class="custom-image">
-            <a href="https://portalsas.com.br/login?redirect=https%3A%2F%2Fhome.portalsas.com.br%2F" button class="button1">Saber Mais</a>
-        </div>
-    </div>
-    
-    
-
-    
-    
-
-</head>
-<body>
-
-<!-- Footer -->
-<div class="footer-container">
-
-    <!-- Logo e Subtítulo -->
-    <div class="container">
-        <div class="logo-container">
-            <img src="logo_colegio-removebg-preview (1).png" alt="Nossa Missão">
-        </div>
-
-        <div class="subtitle">
-            Valores eternos,<br>tempos modernos
-        </div>
-    </div>
-
-    <!-- Três Colunas -->
-    <div class="container">
-        <!-- Column 1 -->
-        <div class="column">
-            <a href="index.html" class="custom-text">Sobre Nós</a>
-            <a href="historia.html" class="custom-text">Historia</a>
-            <a href="#" class="custom-text">Pilares e Valores</a>
-            <a href="estrutura.html" class="custom-text">Nossa Estrutura</a>
-        </div>
-
-        <!-- Column 2 -->
-        <div class="column">
-            <a href="niveisdeensino.html" class="custom-text">Ensinos</a>
-            <a href="ensinos.html" class="custom-text">Projeto Bilíngue</a>
-            <a href="materialsas.html" class="custom-text">Material SAS</a>
-        </div>
-
-        <!-- Column 3 -->
-        <div class="column">
-            <a href=".html" class="custom-text">Contato</a>
-            
-        </div>
-    </div>
-
-    <div class="separator"></div>
-    <div class="icon-container">
-        <div class="icon-item">
-            <img src="12.png" alt="Icon 1" style="width: 100px; height: 100px;">
-            <div class="description">ActiveSoft- Siga</div>
-            <div class="text">Acesso às informações pedagogicas administrativas.</div>
-        </div>
-        <div class="icon-item">
-            <img src="13.png" alt="Icon 2" style="width: 100px; height: 100px;">
-            <div class="description">Class App</div>
-            <div class="text">Acesso ao aplicativo de comunicação com nossa instituição.</div>
-        </div>
-        <div class="icon-item">
-            <img src="14.png" alt="Icon 3" style="width: 100px; height: 100px;">
-            <div class="description">Portal SAS</div>
-            <div class="text">Acesso ao Eureka, Educacross, livros digitais, avaliações, simulados, entre outras ferramentas.</div>
-        </div>
-        <div class="icon-item">
-            <img src="15.png" alt="Icon 4" style="width: 100px; height: 100px;">
-            <div class="description">StandFlor Evolution</div>
-            <div class="text">Informações sobre o nosso programa bilíngue.</div>
-            
-        </div>
-    </div>
-    <div>
-        
-
-
-
-    </div>
-
-
-
-
-
-
-    <div class="separator"></div>Rua Episcopal, 1859 - Centro. São Carlos/SP
-
-
-    <div class="separator"></div>(16) 3362-5044
-
-
-    <div class="separator"></div>Todos os direitos reservados @ 2023 Colégio São Carlos. Proteger a propriedade intelectual e garantir
-    a sua segurança online.
-
-
+    <a href="https://www.youtube.com/watch?v=fbFXunR0kEE&t=5s" class="button">Saber Mais</a>
 </div>
+
+<!-- Segundo bloco -->
+<div class="custom-container">
+    <div class="image-container">
+        <img src="165.png" alt="Imagem 1" class="image">
+        <img src="166.png" alt="Imagem 2" class="image">
+    </div>
+    <a href="https://saseducacao.com.br/" class="button">Saber Mais</a>
+</div>
+
+<!-- Terceiro bloco -->
+<div class="section-container">
+    <div class="custom-section">
+        <img src="1677.png" alt="Imagem Editável" class="custom-image">
+        <a href="https://portalsas.com.br/login?redirect=https%3A%2F%2Fhome.portalsas.com.br%2F" class="button1">Saber Mais</a>
+    </div>
+</div>
+    <!-- Footer -->
+    <div class="footer-container">
+
+        <!-- Logo e Subtítulo -->
+        <div class="container">
+            <div class="logo-container">
+                <img src="logo_colegio-removebg-preview (1).png" alt="Nossa Missão">
+            </div>
+
+            <div class="custom-subtitle">
+                Valores eternos,<br>tempos modernos
+            </div>
+        </div>
+
+        <!-- Três Colunas -->
+        <div class="container">
+            <!-- Column 1 -->
+            <div class="column">
+                <a href="index.html" class="custom-text">Sobre Nós</a>
+                <a href="historia.html" class="custom-text">Historia</a>
+                <a href="#" class="custom-text">Pilares e Valores</a>
+                <a href="nossaestrut.html" class="custom-text">Nossa Estrutura</a>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="column">
+                <a href="niveisdeensino.html" class="custom-text">Ensinos</a>
+                <a href="ensinos.html" class="custom-text">Projeto Bilíngue</a>
+                <a href="materialsas.html" class="custom-text">Material SAS</a>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="column">
+                <a href="contato.html" class="custom-text">Contato</a>
+
+            </div>
+        </div>
+
+        <div class="separator"></div>
+        <div class="icon-container">
+            <div class="icon-item">
+                <img src="12.png" alt="Icon 1" style="width: 100px; height: 100px;">
+                <div class="description">ActiveSoft- Siga</div>
+                <div class="text">Acesso às informações pedagogicas administrativas.</div>
+            </div>
+            <div class="icon-item">
+                <img src="13.png" alt="Icon 2" style="width: 100px; height: 100px;">
+                <div class="description">Class App</div>
+                <div class="text">Acesso ao aplicativo de comunicação com nossa instituição.</div>
+            </div>
+            <div class="icon-item">
+                <img src="14.png" alt="Icon 3" style="width: 100px; height: 100px;">
+                <div class="description">Portal SAS</div>
+                <div class="text">Acesso ao Eureka, Educacross, livros digitais, avaliações, simulados, entre outras
+                    ferramentas.</div>
+            </div>
+            <div class="icon-item">
+                <img src="15.png" alt="Icon 4" style="width: 100px; height: 100px;">
+                <div class="description">StandFlor Evolution</div>
+                <div class="text">Informações sobre o nosso programa bilíngue.</div>
+
+            </div>
+        </div>
+        <div>
+
+
+
+
+        </div>
+
+
+        <div class="separator"></div>Rua Episcopal, 1859 - Centro. São Carlos/SP
+
+
+        <div class="separator"></div>(16) 3362-5044
+
+
+        <div class="separator"></div>Todos os direitos reservados @ 2023 Colégio São Carlos. Proteger a propriedade
+        intelectual e garantir
+        a sua segurança online.
+
+
+    </div>
 
     <script src="scripts.js"></script>
 </body>
-</html>
 
+</html>
